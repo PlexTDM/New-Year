@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>
+            Happy New Year!
+        </title>
+    </head>
+    <body>
+    <div id="main">
+        <div class="main">
+            <div class="title">
+                <img src="https://msg4u.xyz/W0W/2021mainphoto1.gif" width="100%" height="100%">
+            </div>
+            <div class="name">
+              <p>FROM</p>
+                <span>TENGIS</span>
+            </div>
+            <input id="nameinput" placeholder="Enter Your Name">
+            <button id="btn">Enter</button>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modal-top">
+                <p id="hehe">Happy new year To</p>
+                <button id="close" onclick="modal.style.display = 'none'">&#x2715</button>
+                <hr>
+            </div>
+        </div>
+    </div>
+        <style>
+            #main{
+                
+                font-size: 5rem;
+            }
+            .main{
+                position: absolute;
+                z-index: 1;
+                border: 1px white solid;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                width: 80%;
+                height: 90%;
+                margin: auto;
+                text-align:center;
+                align-items: center;
+                justify-content: center;
+            }
+            .title{
+                width: 50%;
+                height: 2   0%;
+                display: flex;
+                margin: auto;
+                align-items: center;
+            }
+            .name p{
+                font-size:2rem;
+                animation: bounce1 3.5s infinite;
+            }
+            .name span{
+                background-image: url(https://msg4u.xyz/W0W/color.gif);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: bounce 3s infinite;
+                display: inline-block;
+                font-size: 4rem;
+            }
+            .modal{
+                position: relative;
+                z-index: 2;
+                display: none;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.2);
+                align-items: center;
+                justify-content: center;
+            }
+            .modal-top{
+                width: 90%;
+                height: 90%;
+                background-color: white;
+            }
+            #hehe{
+                animation: bounce 3s infinite;
+            }
+            #close{
+                position: absolute;
+                top: 6%;
+                right: 5%;
+            }
+            @keyframes bounce{
+                0%, 100% {transform: translate(0);}
+                25% {transform: rotateX(80deg) translateY(1px) rotate(-10deg);}
+                50% {transform: translateY(-20px) rotate(10deg) scale(1.1);} 
+            }
+            @keyframes bounce1{
+                0%, 100% {transform: translate(0);}
+                25% {transform: rotateX(50deg) translateY(1px);}
+                50% {transform: translateY(-20px) rotate(-10deg) scale(1.1);} 
+            }
+        </style>
+        <script>
+            let nameinput = document.getElementById("nameinput");
+            let btn = document.getElementById("btn");
+            let modal = document.querySelector(".modal");
+            let close = document.getElementById("close");
+            btn.onclick = function(){
+                document.getElementById("hehe").innerText = "Happy New Year To " + nameinput.value;
+                modal.style.display = 'flex';
+            }
+        </script>
+    </body>
+</html>
